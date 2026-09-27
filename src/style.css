@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  background: #1e2129;
+  color: #f2f2f2;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: repeat(4, 110px);
+  gap: 8px;
+}
+
+.cell {
+  background: #3a3f4b;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cell:hover {
+  background: #464c5a;
+}
+
+.character {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
